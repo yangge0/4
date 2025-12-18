@@ -1,0 +1,105 @@
+<ThingDefs><List>
+
+	<ThingDef Type="Building" Name="MedicineTable" Parent="ProductionBase">
+	<ThingName>制药桌</ThingName>
+	<Desc>进行药物制造的工作台。</Desc>
+	<TexPath>res/Sprs/buildingnew/building_PharmacyPlace1a</TexPath>
+	<TexScale>0.65</TexScale>
+	<BlockLight>1</BlockLight>
+	<SelectAble>1</SelectAble>
+	<CastShadow>1</CastShadow>
+	<Beauty>5</Beauty>
+	<Collider>
+		<!--(0Empty 1Base)+(2EmptyCenter 4EmptyWorkspace)-->
+		<Data>
+			[1,3],
+			[4,0]
+		</Data>
+		<OffsetGroup>
+			<li><x>0.47</x><y>0.56</y></li>
+			<li><x>0.38</x><y>-0.36</y></li>
+			<li><x>-0.5</x><y>0.5</y></li>
+			<li><x>-0.41</x><y>0.65</y></li>
+		</OffsetGroup>
+		<WorkOffset>
+			<li Index="0" X="0.45" Y="0.54" Ang="1" Dir="Down"/>
+			<li Index="0" X="0.2" Y="-0.8" Ang="1" Dir="Left"/>
+			<li Index="0" X="-0.54" Y="-0.5" Ang="1" Dir="Up"/>
+			<li Index="0" X="-0.3" Y="0.4" Ang="1" Dir="Right"/>
+		</WorkOffset>
+	</Collider>
+	<Building>
+		<Orientation>F,B,R</Orientation>
+		<BePackage>1</BePackage>
+		<SelectProduceStuff>0</SelectProduceStuff>
+		<TerrainAffordanceNeeded>Ground</TerrainAffordanceNeeded>
+		<CanMakeRoom>0</CanMakeRoom>
+		<WorkAnimation>produce</WorkAnimation>
+		<BeMade>
+			<WorkToMake>120</WorkToMake>
+			<Quality>0</Quality>
+			<StuffCategories>
+				<Stuff name = "MetalBlock"/>
+				<Stuff name = "WoodBlock"/>
+				<Stuff name = "RockBlock"/>
+			</StuffCategories>
+			<CostStuffCount>8</CostStuffCount>
+		</BeMade>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>3.68</y>
+			<z>1</z>
+		</SnowRenderData>
+		<ProduceKind>DrugProduct</ProduceKind>
+		<Produces>
+			<Produce>
+				<ThingDef>Item_JingYuancao</ThingDef>
+				<Display>精元草</Display>
+				<Count>5</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_Hemostatics</ThingDef>
+				<Display>金疮药</Display>
+				<Count>2</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_SmallCycle</ThingDef>
+				<Display>小还丹</Display>
+				<Count>2</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_Plaster</ThingDef>
+				<Display>接骨膏</Display>
+				<Count>2</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_Anodyne</ThingDef>
+				<Display>止痛散</Display>
+				<Count>2</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_StoneEssenceDrug</ThingDef>
+				<Display>石髓散</Display>
+				<Count>5</Count>
+			</Produce>
+
+			<Produce>
+				<ThingDef>Item_SilverGrit</ThingDef>
+				<Display>寒晶砂</Display>
+				<Count>10</Count>
+			</Produce>
+			<Produce>
+				<ThingDef>Item_CopperGrit</ThingDef>
+				<Display>火铜砂</Display>
+				<Count>10</Count>
+			</Produce>
+
+			<Produce>
+				<ThingDef>Item_Laxative</ThingDef>
+				<Display>通泻散</Display>
+				<Count>3</Count>
+			</Produce>
+		</Produces>
+	</Building>
+	</ThingDef>
+</List></ThingDefs>

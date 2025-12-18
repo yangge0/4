@@ -1,0 +1,98 @@
+<ThingDefs><List>
+
+<ThingDef Type="Plant" Name="Sk_jingyuancao" Parent="PlantBase">
+
+	<ThingName>精元草</ThingName>
+	<MaxStack>1</MaxStack>
+
+	<TexPath>
+	Spr/plant/jingyuancao.png
+	</TexPath>
+
+	<Desc>富含灵力的药草，本来十分罕见，可以在-30到40度的范围内生长。需要生长在有一定的灵气地方。</Desc>
+	<SelectAble>1</SelectAble>
+	<VisualAble>1</VisualAble>
+	<Beauty>7</Beauty>
+	<Rate>6</Rate>
+	<UseHitPoints>0</UseHitPoints>
+	<MaxHitPoints>100</MaxHitPoints>
+
+	<Plant>
+		<WildClusterSizeRangemin>0</WildClusterSizeRangemin>
+		<WildClusterSizeRangemax>0</WildClusterSizeRangemax>
+		<WildClusterRadius>0</WildClusterRadius>
+
+		<DeciduousLeafInAutumn>0</DeciduousLeafInAutumn>
+		<RipedTexPath>Spr/plant/jingyuancao2.png</RipedTexPath>
+		<HarvestedTexPath></HarvestedTexPath>
+		<LeaflessTexPath></LeaflessTexPath>
+		<SnowedTexPath></SnowedTexPath>
+		<VisualSizeMin>0.2</VisualSizeMin>
+		<VisualSizeMax>1</VisualSizeMax>
+
+		<SowWork>60</SowWork>
+		<SowRenderTags>plant</SowRenderTags>
+		<LifespanFraction>6000</LifespanFraction>
+		<GrowDays>20</GrowDays> <!-- 生长时间 -->
+		<HarvestDays>17</HarvestDays>
+		<RestBegin>19</RestBegin>
+		<RestEnd>4</RestEnd>
+		<WitherAble>0</WitherAble>
+
+		<TempMin>-30</TempMin>
+		<TempMax>40</TempMax>
+		<LingMin>50</LingMin>
+		<LingMax>400</LingMax>
+		<FertilityMin>1</FertilityMin>
+		<FertilityMax>2</FertilityMax>
+		<GrowGlowMin>0</GrowGlowMin>
+		<GrowGlowMax>80</GrowGlowMax>
+		<SnowRenderData>
+			<x>1.7</x>
+			<y>3.7</y>
+			<z>1</z>
+		</SnowRenderData>
+	</Plant>
+	<Harvest>
+		<HarvestWork>100</HarvestWork>
+		<DropWork>50</DropWork>
+		<HarvestValueMin>1</HarvestValueMin>
+		<HarvestFailable>1</HarvestFailable>
+
+		<HarvestTag>
+			<li>Harvest</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_JingYuancao</ThingDef>
+				<Count>1</Count>
+			</li>
+		</HarvestItems>
+	</Harvest>
+	<Element>
+		<Kind>Mu</Kind>
+		<Value>2</Value>
+		<Radius>2</Radius>
+		<Failing>0.7</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>1</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+
+		<Attenuation>0.03</Attenuation>
+		<Absorption>0.5</Absorption>
+		<Accommodate>3</Accommodate>
+	</Ling>
+	<Light>
+		<Value>15</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>0</FailRadius>
+		<Radius>1</Radius>
+		<Color>#FFFFFF</Color>
+	</Light>
+</ThingDef>
+</List></ThingDefs>

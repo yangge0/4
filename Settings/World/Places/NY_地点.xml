@@ -1,0 +1,117 @@
+<Places><List>
+
+	<Place Name="Place_OldLingShan" Parent="Place_Level2Base">
+		<!-- <Location X="1512" Y="666"/> -->
+		<Scale>0.5</Scale>
+		<Icon>res/Sprs/map/map_shan01</Icon>
+		<DisplayName>废弃灵山</DisplayName>
+		<UnLocked>1</UnLocked>
+		<Desc>废弃的灵山，虽然曾经气派无比，此处灵气旺盛，含有丰富的天材地宝。</Desc>
+		<Events>
+			<li Name="Find" Rate="5"/>
+			<li Name="HighFind" Rate="5"/>
+		</Events>
+		<Produce>
+			<li>
+				<ThingDef>Item_LingWood</ThingDef> <!-- 灵木 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HardWood</ThingDef> <!-- 金丝灵木 -->
+				<Count>20</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Jade</ThingDef> <!-- 玉石 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Marble</ThingDef> <!-- 大理石 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingStone</ThingDef> <!-- 灵石 -->
+				<Count>100</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingCrystal</ThingDef> <!-- 灵晶 -->
+				<Count>5</Count>
+				<Rate>0.2</Rate>
+			</li>
+		</Produce>
+		<HighProduce>
+			<li>
+				<ThingDef>Item_LingStone</ThingDef> <!-- 灵石 -->
+				<Count>200</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingCrystal</ThingDef> <!-- 灵晶 -->
+				<Count>10</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_StarEssence</ThingDef> <!-- 星髓 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalYou</ThingDef> <!-- 幽珀 -->
+				<Count>5</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalNing</ThingDef> <!-- 宁珀 -->
+				<Count>5</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalLing</ThingDef> <!-- 灵珀 -->
+				<Count>5</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JinEssence</ThingDef> <!-- 琅琊果 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_MuEssence</ThingDef> <!-- 木枯藤 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ShuiEssence</ThingDef> <!-- 五色金莲 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulPearl</ThingDef> <!-- 玄牝珠 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_TuEssence</ThingDef> <!-- 赭黄精 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HuoEssence</ThingDef> <!-- 朱果 -->
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+		</HighProduce>
+	</Place>
+
+	<Place Name="Place_FeiLingShan" Parent="Place_Level2Base">
+		<Location X="1512" Y="666"/>
+		<!-- <Location X="1262" Y="689"/> -->
+		<Icon>res/Sprs/map/map_shan01</Icon>
+		<DisplayName>废弃灵山</DisplayName>
+		<Desc>废弃的灵山，虽然曾经气派无比，此处灵气旺盛，含有丰富的天材地宝。</Desc>
+	</Place>
+</List></Places>

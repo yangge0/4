@@ -1,0 +1,26 @@
+<Properties><List>
+
+	<!--技能经验悟性系数Ik-->
+	<Property Name="IntelligenceSkillEXPConstant">
+		<DisplayName>学习速度</DisplayName>
+		<DisplayValue>{0:P}</DisplayValue>
+		<Desc>修行者从实践中获取经验的速度。</Desc>
+		<ShowInUI>1</ShowInUI>
+		<GenerateRandom>1</GenerateRandom>
+
+
+		<MinValue>0.5</MinValue>
+		<MaxValue>999</MaxValue>
+		<BaseValue>1</BaseValue>
+
+		<FiveBase>
+			<li Name="Intelligence" Weight="1" Base="2.5" Addion="0.75"/>
+		</FiveBase>
+
+		<Properties>
+			<li Name="ConsciousnessEfficiency" Weight="1"/>
+		</Properties>
+	</Property>
+
+
+</List></Properties>

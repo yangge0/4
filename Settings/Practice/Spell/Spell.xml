@@ -1,0 +1,202 @@
+<Spells><List>
+
+
+	<Spell Name="Spell_Niubi1">
+		<DisplayName>外门符</DisplayName>
+		<Desc>大幅度提升外门弟子能力。使外门弟子专注于工作。\n[color=#D06508]静心外门[/color]</Desc>
+		<Template>Spell/main_texture_bihan01</Template>
+		<Effects>
+			<!--提高治疗的成功率和疗效-->
+			<!-- <li Name="TreatmentExpectQuality" AddP="0.4167"/> -->
+			<!-- <li Name="TreatSuccessChance" AddP="0.4167"/> -->
+			<!--使手脚灵敏，工作效率提高。-->
+			<li Name="GlobalEfficiency" AddP="0.8333"/>
+			<!-- 提高烹饪速度 -->
+			<li Name="CookingSpeed" AddP="0.8333"/>
+			<!-- 提高种植速度 -->
+			<li Name="PlantWorkSpeed" AddP="0.8333"/>
+			<!-- 提高收获速度 -->
+			<li Name="PlantHarvestSpeed" AddP="0.8333"/>
+			<!-- 提高采掘速度 -->
+			<li Name="MiningSpeed" AddP="0.8333"/>
+			<!-- 提高割除速度 -->
+			<li Name="CuttingSpeed" AddP="0.8333"/>
+			<!-- 提高锻造速度 -->
+			<li Name="SmithingSpeed" AddP="0.8333"/>
+			<!-- 提高手工速度 -->
+			<li Name="HandworkSpeed" AddP="0.8333"/>
+			<!-- 提高缝纫速度 -->
+			<li Name="TailoringSpeed" AddP="0.8333"/>
+			<!-- 提高清洁速度 -->
+			<li Name="CleanSpeed" AddP="0.8333"/>
+			<!-- 提高打猎，种植、采掘收获时的产量。 -->
+			<li Name="PlantHarvestYieldEfficiency" AddP="0.8333"/>
+			<li Name="ButcherYieldEfficiency" AddP="0.8333"/>
+			<li Name="MiningYieldEfficiency" AddP="0.8333"/>
+			<!-- 提高制作物的品质。 -->
+			<li Name="MadeQualityAddValue" AddV="0.83"/>
+			<!--降低身体对食物与水的消耗。-->
+			<li Name="NutritionConsumeConstant" AddP="-0.15"/>
+			<li Name="WaterConsumeConstant" AddP="-0.15"/>
+			<!--让人心情轻微变好，且降低娱乐值的衰减速度。-->
+			<li Name="HappyConsumeConstant" AddP="-0.3"/>
+			<!--可以提高睡眠质量，并让人不易疲劳。-->
+			<li Name="FatigueConsumeConstant" AddP="-0.4167"/>
+			<li Name="FatigueRecoveryConstant" AddP="0.4167"/>
+			<!-- 提高耐寒能力 -->
+			<li Name="ComfyTMin" AddV="-20"/>
+			<li Name="ToleranceTMin" AddV="-20"/>
+			<!-- 提高耐热能力 -->
+			<li Name="ComfyTMax" AddV="80"/>
+			<li Name="ToleranceTMax" AddV="80"/>
+			<!-- 提高移动速度 -->
+			<li Name="MoveSpeed" AddP="0.8333"/>
+		</Effects>
+	</Spell>
+
+	<Spell Name="Spell_Niubi2">
+		<DisplayName>内门符</DisplayName>
+		<Desc>大幅度提升内门弟子能力并提高五维。使内门弟子勤学苦练早日飞仙。\n[color=#D06508]内门大师[/color]</Desc>
+		<Template>Spell/main_texture_bishu01</Template>
+		<Effects>
+			<!--可以提高身体自然恢复力的符咒。-->
+			<li Name="RecoveryPower" AddP="0.4167"/>
+			<!-- 提高历练时的速度 -->
+			<li Name="WorldMapFlySpeedAddP" AddV="4.167"/>
+			<!-- 提高移动速度 -->
+			<li Name="MoveSpeed" AddP="0.8333"/>
+			<!-- 可以提高视野范围，并提高历练时发现新地点的速度。 -->
+            <li Name="VisionRadius" AddP="0.4167"/>
+			<li Name="ExperienceFindSpeedAddV" AddV="0.8333"/>
+			<!-- 隐匿自己的气息 -->
+			<li Name="ExperiencePrestigeAddP" AddV="-1"/>
+			<!-- 提高内门恢复率 -->
+			<li Name="MagicDamageRecoveryPowerAddV" AddV="0.4167"/>
+			<!-- 佩戴者可以提高潜力。 -->
+			<li Name="PotentialOfBasepracticeAddValue" AddV="1.5"/>
+			<!-- 提高疼痛极限 -->
+			<li Name="PainTolerance" AddP="0.8333"/>
+			<!-- 提高耐寒能力 -->
+			<li Name="ComfyTMin" AddV="-40"/>
+			<li Name="ToleranceTMin" AddV="-40"/>
+			<!-- 提高耐热能力 -->
+			<li Name="ComfyTMax" AddV="160"/>
+			<li Name="ToleranceTMax" AddV="160"/>
+			<!--让人心情轻微变好，且降低娱乐值的衰减速度。-->
+			<li Name="HappyConsumeConstant" AddP="-0.4167"/>
+			<!--可以提高睡眠质量，并让人不易疲劳。-->
+			<li Name="FatigueConsumeConstant" AddP="-0.4167"/>
+			<li Name="FatigueRecoveryConstant" AddP="0.4167"/>
+		</Effects>
+			<!-- 可以提高五维。 -->
+			<BaseFive>1,1,1,1,1</BaseFive>
+	</Spell>
+
+	<Spell Name="Spell_Niubi3">
+		<DisplayName>修炼符</DisplayName>
+		<Desc>大幅度提升弟子修炼能力。使内弟子早日飞仙。\n[color=#D06508]修炼大师[/color]</Desc>
+		<Template>Spell/main_texture_bishu01</Template>
+		<Effects>
+			<!--提高治疗的成功率和疗效-->
+			<li Name="TreatmentExpectQuality" AddP="0.8333"/>
+			<li Name="TreatSuccessChance" AddP="0.8333"/>
+			<!-- 提高营养吸收 -->
+			<li Name="NutritionRecoveryConstant" AddP="0.8333"/>
+			<!--降低身体对食物与水的消耗。-->
+			<!-- <li Name="NutritionConsumeConstant" AddP="-0.5"/> -->
+			<!-- <li Name="WaterConsumeConstant" AddP="-0.5"/> -->
+			<!-- 精元转化速度、补充加成 -->
+			<li Name="PracticeFoodConsumeConstant" AddV="0.8333"/>
+			<!-- 增加精元炼化速度 -->
+			<!-- <li Name="NutritionToJingYuanK" AddV="1.6666"/> -->
+			<!-- 降低道行 -->
+			<!-- <li Name="AbilityLvAddV" AddV="-30"/> -->
+			<!-- 灵气吸收速度加成 -->
+			<li Name="LingAbsorbSpeed" AddP="0.8333"/>
+			<!-- 提高灵气最大值 -->
+			<!-- <li Name="NpcLingMaxValue" AddV="5000"/> -->
+			<!-- 提高灵气最大% -->
+			<!-- <li Name="NpcLingMaxValue" AddP="0.5"/> -->
+			<!-- 提高领悟发生几率 -->
+			<li Name="InspirationCoefficient" AddP="0.4167"/>
+			<!-- 可以提高突破瓶颈的概率。 -->
+			<li Name="PracticeRateAddPFromDan" AddP="0.4167"/>
+			<!-- 心情与心境基础值 -->
+			<li Name="BaseEmotionAddV" AddV="41.67"/>
+			<li Name="MindStateBaseValue" AddV="41.67"/>
+			<!-- 使头脑清明，提高学习能力。 -->
+			<li Name="IntelligenceSkillEXPConstant" AddP="1"/>
+			<!-- 可以提高修炼速度。 -->
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="1"/>
+		</Effects>
+	</Spell>
+
+	<Spell Name="Spell_Niubi4">
+		<DisplayName>武学符</DisplayName>
+		<Desc>大幅度提升内门弟子武学能力。使内门弟子早日飞仙。\n[color=#D06508]武学大师[/color]</Desc>
+		<Template>Spell/main_texture_bishu01</Template>
+		<SkillEffects>
+			<!-- 佩戴者可以提高护体技能等级。 -->
+			<li Name="Barrier" LevelOver="1"/>
+		</SkillEffects>
+		<Effects>
+			<!-- 佩戴者可以提高护体之力 -->
+			<li Name="NpcFight_ShieldConversionRate" AddV="0.83"/>
+			<!-- 佩戴者可以提高抵御金属性伤害之力 -->
+			<li Name="NpcFight_ShieldResistanceToJin" AddV="0.3"/>
+			<!-- 佩戴者可以提高抵御木属性伤害之力 -->
+			<li Name="NpcFight_ShieldResistanceToMu" AddV="0.3"/>
+			<!-- 佩戴者可以提高抵御水属性伤害之力 -->
+			<li Name="NpcFight_ShieldResistanceToShui" AddV="0.3"/>
+			<!-- 佩戴者可以提高抵御火属性伤害之力 -->
+			<li Name="NpcFight_ShieldResistanceToHuo" AddV="0.3"/>
+			<!-- 佩戴者可以提高抵御土属性伤害之力 -->
+			<li Name="NpcFight_ShieldResistanceToTu" AddV="0.3"/>
+			<!-- 佩戴者可以提高法宝回灵倍率 -->
+			<li Name="NpcFight_FabaoLingRecoverK" AddV="2"/>
+			<!-- 佩戴者可以从根本上提高法术威力，法术灵气消耗 -->
+			<li Name="NpcFight_SpellPowerAddP" BAddP="0.5"/>
+			<li Name="NpcFight_SpellLingCostAddP" BAddP="0.5"/>
+			<!-- 佩戴者可以从根本上降低术法技能灵气消耗 -->
+			<!-- <li Name="NpcFight_SpellLingCostAddP" BAddP="-0.5"/> -->
+			<!-- 佩戴者可以提高战斗命中 -->
+			<li Name="NpcFight_BaseHitChance" AddV="1.2"/>
+			<!-- 佩戴者可以提高战斗闪避 -->
+			<li Name="NpcFight_BaseDodgeChance" AddV="0.6"/>
+			<!-- 佩戴者可以从根本上提高法宝威力，并全面提高法宝能力 -->
+			<li Name="NpcFight_FabaoPowerAddP" BAddP="0.05"/>
+			<li Name="NpcFight_FabaoPowerAddP" AddP="2"/>
+			<li Name="NpcFight_FabaoLingRecoverAddP" AddP="2"/>
+			<li Name="NpcFight_FabaoMaxLingAddP" AddP="2"/>
+			<li Name="NpcFight_FabaoRepelDistanceAddV" AddP="0.5"/>
+			<li Name="NpcFight_FabaoRepelResistanceAddV" AddP="0.5"/>
+			<li Name="NpcFight_FabaoFlySpeedAddP" AddP="0.3"/>
+			<li Name="NpcFight_FabaoTurnSpeedAddP" AddP="0.3"/>
+			<li Name="NpcFight_FabaoTrailingLengthAddP" AddP="2"/>
+		</Effects>
+	</Spell>
+
+		<Spell Name="Spell_FaBao1">
+		<DisplayName>丹器符</DisplayName>
+		<Desc>大幅度提高炼丹、炼器成功率。\n[color=#D06508]丹器大师[/color]</Desc>
+		<Template>Spell/main_texture_bishu01</Template>
+		<Effects>
+			<!-- 可以提高法宝炼制速度加值 -->
+			<li Name="FabaoMake_SpeedAddV" AddV="2"/>
+			<!-- 可以提高法宝炼制品质加值 -->
+			<li Name="FabaoMake_QualityAddV" AddV="0.5"/>
+			<!-- 可以提高法宝炼制品阶加成。 -->
+			<li Name="FabaoMake_LingInheritRateAddV" AddV="0.5"/>
+			<!-- 可以提高炼制法宝成功率。 -->
+			<li Name="FabaoMake_SuccessRateAddV" AddV="0.5"/>
+			<!-- 可以提高神器炼成几率加值。 -->
+			<li Name="FabaoMake_TwelveRateChance" AddV="0.3"/>
+			<!-- 可以提高炼制丹药的成功率。 -->
+			<li Name="DanMake_SuccessRateAddV" AddV="0.3"/>
+			<!-- 可以提高炼制丹药的产量。 -->
+			<li Name="DanMake_YieldAddP" AddV="0.5"/>
+			<!-- 可以提高炼丹药炼制速度加值。 -->
+			<li Name="DanMake_SpeedAddV" AddV="2"/>
+         </Effects>
+	</Spell>
+</List>	</Spells>

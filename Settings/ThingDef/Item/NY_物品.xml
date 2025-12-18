@@ -1,0 +1,62 @@
+<ThingDefs><List>
+	<ThingDef Type="Item" Name="Item_JingYuancao" Parent="DrugBase">
+	<ThingName>精元草</ThingName>
+	<MaxStack>500</MaxStack>
+	<TexPath>Spr/plant/jingyuancao2.png</TexPath>
+	<Desc>富含灵力的药草，药性温和，十分泛用，可以配合各种材料练成丹药。内门弟子服用可以补充少量精元。</Desc>
+	<Tags>
+		<Tag Name="Tame" Level="12"/>
+		<Tag Name="TameLing" Level="1"/>
+	</Tags>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>5</Rate>
+	<Beauty>2</Beauty>
+	<ElementKind>Mu</ElementKind>
+	<Flammability>
+		<Flammability>0.4</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+	</Flammability>
+	<Light>
+		<Value>15</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>0</FailRadius>
+		<Radius>1</Radius>
+		<Color>62F8FFFF</Color>
+	</Light>
+	<Item Lable="Drug">
+		<FabaoSuffix>花,蕊</FabaoSuffix>
+		<PhysicalLables>
+			<li>Soft1</li>
+			<li>Light1</li>
+		</PhysicalLables>
+
+		<Food>
+			<EatDirectable>1</EatDirectable> <!-- 是否可以直接食用 -->
+			<Nutrition>30</Nutrition> <!-- 食物 -->
+			<PracticeNutrition>30</PracticeNutrition> <!-- 精元 -->
+		</Food>
+
+		<BeMade>
+			<WorkToMake>50</WorkToMake> <!-- 工作时间 -->
+			<Quality>0</Quality>
+			<CostItems> <!-- 所需材料 -->
+				<Item name = "Item_MagicHerb" count = "25"/>
+				<Item name = "Item_Mint" count = "25"/>
+			</CostItems>
+		</BeMade>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0.4</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>2</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>3</ElementPowerWhenBeMain>
+		</BeMaterial>
+		<Rot>
+			<RotSpeed>0.003</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	</ThingDef>
+
+</List></ThingDefs>

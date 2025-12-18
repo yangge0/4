@@ -1,0 +1,157 @@
+<Stories><List>
+<!-- 系统使用，不能修改 -->
+
+	<Story Name="Story_Item_kuangshiBase" Parent="BaseFillingStory">
+		<DisplayName>物品池</DisplayName>
+		<Kind>None</Kind>
+		<ItemCache>  <!-- 矿石 -->
+			<li>
+				<ThingDef>Item_LingWood</ThingDef> <!-- 灵木 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HardWood</ThingDef> <!-- 金丝灵木 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Jade</ThingDef> <!-- 玉石 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Marble</ThingDef> <!-- 大理石 -->
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingStone</ThingDef> <!-- 灵石 -->
+				<Count>100</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingCrystal</ThingDef> <!-- 灵晶 -->
+				<Count>5</Count>
+				<Rate>0.2</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_StarEssence</ThingDef> <!-- 星髓 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalYou</ThingDef> <!-- 幽珀 -->
+				<Count>5</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalNing</ThingDef> <!-- 宁珀 -->
+				<Count>5</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulCrystalLing</ThingDef> <!-- 灵珀 -->
+				<Count>5</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JinEssence</ThingDef> <!-- 琅琊果 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_MuEssence</ThingDef> <!-- 木枯藤 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ShuiEssence</ThingDef> <!-- 五色金莲 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SoulPearl</ThingDef> <!-- 玄牝珠 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_TuEssence</ThingDef> <!-- 赭黄精 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HuoEssence</ThingDef> <!-- 朱果 -->
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+		</ItemCache>
+	</Story>
+	<Story Name="LS_KuangShan"  Parent="Story_Item_kuangshiBase">
+		<DisplayName>废弃灵山</DisplayName>
+		<Desc>[NAME]发现一堆废墟。或许在这其中还能找到一些遗留的宝物。</Desc>
+		<Selections>
+			<li>
+				<Display>寻觅一番</Display>
+				<Tip>机缘</Tip>
+				<Condition><![CDATA[
+				me:GetLuck() >= me:RandomInt(1, 6)
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 5);
+				me:AddMsg(XT("[NAME]果然察觉到此处有宝物的气息，也许是机缘所致，他轻易的找到了宝贝。"));
+				if nR >= 3 then
+					me:DropRandomItem("FightFabao", 9, 12)
+				else
+					me:DropAwardItemFromCache(story.ItemCache, 1,3);
+				end
+				]]>
+				</OKResult>
+				<NOResult>me:AddMsg(XT("[NAME]果然察觉到此处有宝物的气息，但是几经搜索都找不到头绪，只能无奈放弃。"));</NOResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+	<!-- =============================================================== 解锁地点分割线 =============================================================== -->
+
+	<Story Name="JSDD_01"  Parent="BaseFillingStory">
+		<DisplayName>发现地点</DisplayName>
+		<Desc>[NAME]在[PLACE]听说附近有不少特别的地方，突然起了游兴。[IT]也不作进一步打听，只是寻幽访道，随缘而行。</Desc>
+		<Kind>Secret</Kind>
+		<Selections>
+			<li>
+				<Display>寻幽访道</Display>
+				<OKResult><![CDATA[
+					me:AddMsg("[NAME]经过七弯八绕，总算是赶在天黑之前，找到了这个特别的地点。");
+					me:UnLockPlace("Place_OldLingShan");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="JSDD_02"  Parent="BaseFillingStory">
+		<DisplayName>发现地点</DisplayName>
+		<Desc>[NAME]在[PLACE]听说附近有不少特别的地方，突然起了游兴。[IT]也不作进一步打听，只是寻幽访道，随缘而行。</Desc>
+		<Kind>Secret</Kind>
+		<Selections>
+			<li>
+				<Display>寻幽访道</Display>
+				<OKResult><![CDATA[
+					me:AddMsg("[NAME]经过七弯八绕，总算是赶在天黑之前，找到了这个特别的地点。");
+					me:UnLockPlace("Place_FeiLingShan");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>
