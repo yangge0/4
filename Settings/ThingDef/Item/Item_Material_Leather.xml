@@ -1,0 +1,212 @@
+﻿<ThingDefs><List>
+	<ThingDef Type="Item" Name="LeatherBase" Parent="MaterialBase">
+	
+	<Tags>
+	</Tags>
+	<ThingName></ThingName>
+	<TexPath>Item/Cloth</TexPath>
+	<Desc>Desc.</Desc>
+	<MaxStack>500</MaxStack>
+	<Beauty>-2</Beauty>
+	<MaxHitPoints>300</MaxHitPoints>
+	<Rate>2</Rate>	
+	<ElementKind>Tu</ElementKind>
+	<Color>63431AFF</Color>
+	<Flammability>
+		<Flammability>0.4</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>160</BurningPoint>
+	</Flammability>
+	
+	<Item Lable="Leather">
+		<FabaoSuffix>革,罩,障</FabaoSuffix>
+		<PhysicalLables>
+			<li>Rough1</li>
+			<li>Soft1</li>
+		</PhysicalLables>
+		 
+		<FuelMultiplier>1</FuelMultiplier>
+		<BeMaterial>
+			<RateWhenBeMain>1</RateWhenBeMain>
+			
+			
+			<WorkSpeedCoefficientWhenBeMain>1</WorkSpeedCoefficientWhenBeMain>
+			
+			<CostMultiplier>1</CostMultiplier>
+			<NamePrefix>皮</NamePrefix>
+			
+			<LingShieldWhenBeMain>0</LingShieldWhenBeMain>
+			
+			<TemperatureMaxAddWhenBeMain>1</TemperatureMaxAddWhenBeMain>
+			<TemperatureMinAddWhenBeMain>1</TemperatureMinAddWhenBeMain>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.3</LingNumberRate>
+			
+			<BurningPointWhenBeMain>160</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0.4</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>1</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>1</ElementPowerWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		
+		<Rot>
+			<RotSpeed>0.0001</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.03</Attenuation>
+		<Absorption>0.2</Absorption>
+		<Accommodate>1.4</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>1</Value>         
+		<Radius>1</Radius>
+		<Failing>1</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef Type="Item" Name="Item_FeiLeather" Parent="LeatherBase">
+	<Tags>
+	</Tags>
+	<ThingName>蜚之皮</ThingName>
+	<TexPath>res\Sprs\object\object_ApieceOfFur</TexPath>
+	<Desc>妖兽蜚的毛皮，含有神奇的力量，冬暖夏凉，甚至可以隔绝灵气造成的伤害。</Desc>
+	<MaxStack>100</MaxStack>
+	<Beauty>8</Beauty>
+	<Rate>6</Rate>	
+	<Color>6A4272FF</Color>
+	<Flammability>
+		<Flammability>0</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>500</BurningPoint>
+	</Flammability>
+	
+	<Item Lable="Leather">
+		<NotRandom>1</NotRandom>
+		<FuelMultiplier>1</FuelMultiplier>
+		<BeMaterial>
+			<RateWhenBeMain>6</RateWhenBeMain>
+			<ClothesColorID>8</ClothesColorID>
+			
+			<CostMultiplier>0.3</CostMultiplier>
+			<NamePrefix>蜚皮</NamePrefix>
+			
+			<LingShieldWhenBeMain>0.003</LingShieldWhenBeMain>
+			
+			<TemperatureMaxAddWhenBeMain>10</TemperatureMaxAddWhenBeMain>
+			<TemperatureMinAddWhenBeMain>-14</TemperatureMinAddWhenBeMain>
+			
+			<ColorWhenBeMain>8D8570FF</ColorWhenBeMain>
+			
+			<MaxHitPointsPerNum>20</MaxHitPointsPerNum>
+			<LingNumberRate>0.7</LingNumberRate>
+			
+			<BurningPointWhenBeMain>500</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<BeMade>
+			<WorkToMake>50</WorkToMake>
+			<Quality>6</Quality>
+			<CostItems>
+				<Item name = "Item_Cotton" count = "4"/>
+				<Item name = "Item_LingCrystal" count = "1"/>
+			</CostItems>
+		</BeMade>  
+		<Rot>
+			<RotSpeed>0</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	</ThingDef>
+	
+	
+	
+	<ThingDef Type="Item" Name="Item_LuShuLeather" Parent="LeatherBase">
+	<Tags>
+	</Tags>
+	<ThingName>鹿蜀之皮</ThingName>
+	<TexPath>res\Sprs\object\object_ApieceOfFur</TexPath>
+	<Desc>灵兽鹿蜀的毛皮，含有神奇的力量，冬暖夏凉，甚至可以隔绝灵气造成的伤害。</Desc>
+	<MaxStack>100</MaxStack>
+	<Beauty>8</Beauty>
+	<Rate>6</Rate>	
+	<Color>FF8D44FF</Color>
+	<Flammability>
+		<Flammability>0</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>500</BurningPoint>
+	</Flammability>
+	
+	<Item Lable="Leather">
+		 
+		<NotRandom>1</NotRandom>
+		<FuelMultiplier>1</FuelMultiplier>
+		<BeMaterial>
+			<RateWhenBeMain>6</RateWhenBeMain>
+			<ClothesColorID>7</ClothesColorID>
+			
+			<CostMultiplier>0.3</CostMultiplier>
+			<NamePrefix>鹿蜀皮</NamePrefix>
+			
+			<LingShieldWhenBeMain>0.003</LingShieldWhenBeMain>
+			
+			<TemperatureMaxAddWhenBeMain>10</TemperatureMaxAddWhenBeMain>
+			<TemperatureMinAddWhenBeMain>-14</TemperatureMinAddWhenBeMain>
+			
+			<ColorWhenBeMain>8D8570FF</ColorWhenBeMain>
+			
+			<MaxHitPointsPerNum>20</MaxHitPointsPerNum>
+			<LingNumberRate>0.7</LingNumberRate>
+			
+			<BurningPointWhenBeMain>500</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		
+		<BeMade>
+			<WorkToMake>50</WorkToMake>
+			<Quality>6</Quality>
+			<CostItems>
+				<Item name = "Item_Cotton" count = "4"/>
+				<Item name = "Item_LingCrystal" count = "1"/>
+			</CostItems>
+		</BeMade>  
+		
+		<Rot>
+			<RotSpeed>0</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	</ThingDef>
+</List></ThingDefs>

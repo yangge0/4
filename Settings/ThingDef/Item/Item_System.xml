@@ -1,0 +1,220 @@
+<ThingDefs><List>
+	<!--system下的item名称不能随意更改-->
+
+	<ThingDef Type="Item" Name="Item_HorribleMeal" Parent="SimpleFoodBase">
+	<ThingName>搞砸的饭菜</ThingName>
+	<TexPath>res\Sprs\object\object_BadFood</TexPath>
+	<Desc>一道烹饪失败的料理，味道十分勉强，仅仅可以填肚子。</Desc>
+	<Beauty>1</Beauty>
+	<Tags>
+		<Tag Name="Food" Level="-1"/>
+		<Tag Name="BowlFood" Level="1"/>
+	</Tags>	
+	<MaxStack>100</MaxStack>
+	<Item>
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>40</Nutrition>
+			<Moods>
+				<li>Eat3</li>
+			</Moods>
+			<Damages>
+				<li PartName="TheWholeBody" Name="AbdominalPain" Rate="0.5"/>
+				<li Rate="0.5"/>
+			</Damages>
+		</Food>
+		<BeMade>
+			<WorkToMake>20</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<Condition>
+					<Skills>
+						<!--<Skill name = "sss" level="1"/>-->
+					</Skills>
+					<Researchs>
+						<!--<Research name = "sss" level="1"/>-->
+					</Researchs>
+			</Condition>
+			<StuffCategories>
+				<Stuff name = "Meat"/>
+				<Stuff name = "Ingredient"/>
+			</StuffCategories>
+			<CostStuffCount>1</CostStuffCount>
+		</BeMade> 
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_DragonShit" Parent="MaterialBase">	
+	<Tags>
+		<Tag Name="_SHIT" Level="1"/>
+	</Tags>
+	<ThingName>天龙砂</ThingName>
+	<TexScale>3</TexScale>
+	<TexPath>res\Sprs\object\object_shi01</TexPath>	
+	<Desc>龙的粪便。</Desc>
+	<MaxStack>1</MaxStack>
+	<Beauty>-20</Beauty>
+	<Rate>5</Rate>
+	<ElementKind>Tu</ElementKind>
+	<Item Lable="Other">
+		<FabaoSuffix>粪,砂,屎</FabaoSuffix>
+		<PhysicalLables>
+			<li>Rough2</li>
+			<li>LowDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>Shit</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_LingCrystal" count = "500"/>
+			</CostItems>
+		</BeMade> 
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>50</Nutrition>
+			<Moods>
+				<li>Eat12</li>
+			</Moods>
+		</Food>
+		 <Rot>
+			 <RotSpeed>0.001</RotSpeed>
+			 <DaysToRotStart>0</DaysToRotStart>
+			 <DestroyThing></DestroyThing>
+			 <TempMin>0</TempMin>
+			 <LingMax>200</LingMax>
+		 </Rot>
+	</Item>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.05</Attenuation>
+		<Absorption>0.4</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>3</Value>         
+		<Radius>3</Radius>
+		<Failing>0.6</Failing>
+		<FailRadius>0</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_StoneBox2" Parent="MaterialBase">
+		<ThingName>古旧石匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>深埋在山岩中的一方石匣，看上去有些年代了，不知道里面有什么东西。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_HolySpar" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_StoneBox2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	
+		<ThingDef Type="Item" Name="Item_LunHui_Box2" Parent="MaterialBase">
+		<ThingName>神符匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>神奇的符匣，其中装有一张绝品符咒。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_HolySpar" count = "1"/>
+			</CostItems>
+		</BeMade> 	
+			<NotRandom>1</NotRandom>
+			<FabaoSuffix>匣</FabaoSuffix>				
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="打开太一宝匣。" Story="Story_Item_LunHui_Box2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="Item_DragonScaleGift" Parent="MaterialBase">
+		<ThingName>龙鳞礼盒</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>用龙鳞换来的小礼包233333。</Desc>	
+		<Beauty>12</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_DragonScale" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_DragonScaleGift" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="Item_TaiYiMen" Parent="MaterialBase">
+		<ThingName>太一门秘匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>里面封存了一些有关于太一门的东西。</Desc>	
+		<Beauty>12</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_Water" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_TaiYiMen" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+</List></ThingDefs>

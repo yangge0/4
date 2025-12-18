@@ -1,0 +1,10 @@
+{
+	"Name":"灵石交易处v3.2",		
+	"DisplayName":"灵石交易处（青花鱼出品）", 
+	"Desc":"这是一个让你能用灵石交易物资的mod",
+	"Enable":true,			
+	"GameVersion":0.9487,		
+	"Version":3.2,			
+	"Author":"青花鱼",			
+	"Sort":"1",				
+}

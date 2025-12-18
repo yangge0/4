@@ -1,0 +1,45 @@
+<Stories><List>	
+	<Story Name="BaoZang_XieDiLing"  Parent="BaseFillingStory">
+		<DisplayName>太一门旧址</DisplayName>
+		<Desc>太一门过去的山门，虽然曾经气派无比，但是现如今只剩下一堆废墟，或许在这其中还能找到一些遗留的宝物。</Desc>
+		<Kind>BaoZang_XieDiLing</Kind>
+		<Selections>
+			<li>
+				<Display>寻觅一番</Display>
+				<Condition>
+				<![CDATA[	
+				me:RandomInt(1, 11) <= me:GetLuck()
+				]]>
+				</Condition>
+				<Tip>机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 50); 
+				if nR <= 2 then
+					me:AddMsg("[NAME]收起飞剑，落下云端。在废墟搜索一番之后找到了一个古朴的石匣。");me:DropAwardItem(Item_DragonScaleGift, 1);
+				elseif nR <= 8 then
+					me:AddMsg("[NAME]收起飞剑，落下云端。走到近处，才发现废墟之中还有不少邪教弟子在看守没运走的宝贝，[NAME]悄悄摸过去偷了一瓶丹药。");me:DropAwardItemFromCache(story.ItemCache4, 1);
+				elseif nR <= 14 then
+					me:AddMsg("[NAME]发现一些珍贵的材料。");me:DropAwardItemFromCache(story.ItemCache3, 1);
+				elseif nR <= 20 then
+					me:AddMsg("[NAME]发现一本书册。");me:DropEsotericFromCache(story.ItemCache, 1);
+				elseif nR <= 26 then
+					me:AddMsg("[NAME]发现一门神通。");me:DropEsotericFromCache(story.ItemCache2, 1);
+				elseif nR <= 50 then
+					me:AddMsg("[NAME]收起飞剑，落下云端。走到近处，才发现废墟之中还有不少邪教弟子在看守没运走的宝贝，[NAME]准备悄悄偷走两件，结果却被发现了，只好放弃宝贝，夺路而逃。");
+				end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>离去</Display>
+				<DisplayCondition><![CDATA[	
+				world:GetWorldFlag(6) == 0
+				]]>
+				</DisplayCondition>
+				<OKResult>me:AddMsg("堂堂太一门，如今竟是这般模样。");</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>

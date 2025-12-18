@@ -1,0 +1,70 @@
+<Stories><List>	
+<!--系统使用，不能修改-->
+	<Story Name="Story_Item_DragonScaleGift" Parent="BaseFillingStory">
+		<DisplayName>龙鳞礼盒</DisplayName>
+		<Desc>用龙鳞换来的小礼包233333。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			
+			<li>
+				<Display>打开</Display>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 23); 
+				if nR <= 2 then
+					me:AddMsg("[NAME]打开礼包，发现自己开出了十倍大礼包！！！。");me:DropAwardItem("Item_DarksteelRock",100);me:DropAwardItem("Item_SoulCrystalYou",100);me:DropAwardItem("Item_HolySpar",10);me:DropAwardItem("Item_LuShuLeather",3000);me:DropAwardItem("Item_ThunderAir",1);me:DropAwardItem("Item_MonsterBlood",500);
+				else
+					me:AddMsg("[NAME]打开礼包，发现有不少好东西。PS：有几率开出十倍哦~。");me:DropAwardItem("Item_DarksteelRock",10);me:DropAwardItem("Item_SoulCrystalYou",10);me:DropAwardItem("Item_HolySpar",1);me:DropAwardItem("Item_LuShuLeather",300);me:DropAwardItem("Item_MonsterBlood",50);
+				end
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+	<Story Name="Story_Item_TaiYiMen" Parent="BaseFillingStory">
+		<DisplayName>太一门秘匣</DisplayName>
+		<Desc>里面封存了一些有关于太一门的东西。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			
+			<li>
+				<Display>打开</Display>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 23); 
+				if nR <= 2 then
+					me:AddMsg("[NAME]打开秘匣，看到里面放了一张图纸。");me:DropEsoteric("YouJi_TaiYiMen");me:UnLockGong("Gong_51_None") 
+				else
+					me:AddMsg("[NAME]打开秘匣，看到里面放了一张图纸。");me:DropEsoteric("YouJi_TaiYiMen");me:UnLockGong("Gong_51_None") 
+				end
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="Story_Item_Gong51" Parent="BaseFillingStory">
+		<DisplayName>功法解锁宝匣</DisplayName>
+		<Desc>放着功法的石匣。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			
+			<li>
+				<Display>打开</Display>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 23); 
+				if nR <= 23 then
+					me:AddMsg("[NAME]打开石匣，发现其中有一本功法。");me:UnLockGong("Gong_51_None");
+					else
+					me:UnLockGong("Gong_51_None");
+				end
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>
